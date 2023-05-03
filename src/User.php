@@ -61,14 +61,6 @@ class User
 		return null;
 	}
 
-	public static function hashPassword($password)
-	{
-		$hashed_password = null;
-		// DO SOMETHING HERE TO HASH THE PASSWORD
-		// ...
-		return $hashed_password;
-	}
-
 	public static function attemptLogin($email, $pass)
 	{
 		global $conn;
@@ -81,9 +73,6 @@ class User
 				LIMIT 1
 			";
 			$statement = $conn->prepare($sql);
-
-			// Perform password hash verification (if necessary)
-
 			$statement->execute([
 				'email' => $email,
 				'pass' => $pass
@@ -102,9 +91,6 @@ class User
 		global $conn;
 
 		try {
-			// Hash the password before inserting it to DB
-			// ..
-
 			$sql = "
 				INSERT INTO users (first_name, last_name, email, pass)
 				VALUES ('$first_name', '$last_name', '$email', '$password')
@@ -125,9 +111,6 @@ class User
 
 		try {
 			foreach ($users as $user) {
-				// Hash the password before inserting it to DB
-				// ..
-
 				$sql = "
 					INSERT INTO users
 					SET
@@ -145,5 +128,5 @@ class User
 		}
 
 		return false;
-	}
+	}	
 }

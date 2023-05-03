@@ -16,6 +16,12 @@ if (isset($_SESSION['is_logged_in'])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login</title>
+	<style>
+		a{
+			color:blue;
+			text-decoration:none;
+		}
+	</style>
 </head>
 <body>
 <h1>Login</h1>
@@ -32,7 +38,11 @@ if (isset($_SESSION['is_logged_in'])) {
 	<div>
 		<button>
 			Login
+			
 		</button>	
+		<button>
+			<a href="register.php">Register</a>
+		</button>
 	</div>
 </form>
 </body>

@@ -23,11 +23,11 @@
 	</div>
 	<div>
 		<label>Password</label>
-		<input type="password" name="password" />	
+			<input type="password" name="password" />	
 	</div>
 	<div>
 		<label>Confirm Password</label>
-		<input type="password" name="confirm_password" />	
+			<input type="password" name="confirm_password" />	
 	</div>
 	<div>
 		<button>
